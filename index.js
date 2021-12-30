@@ -7,5 +7,8 @@ axios_1["default"].get(url).then(function (response) {
     var id = Todo.id;
     var title = Todo.title;
     var completed = Todo.completed;
-    console.log("\n\t\tThe id of the todo is: ".concat(id, "\n\t\twith a title of: ").concat(title, "\n\t\twhich is completed?: ").concat(completed, "\n\t"));
+    logger(id, title, completed);
 });
+var logger = function (id, title, completed) {
+    console.log("\n\t\tThe id of the todo is: ".concat(id, "\n\t\twith a title of: ").concat(title, "\n\t\twhich is completed?: ").concat(completed, "\n\t"));
+};
