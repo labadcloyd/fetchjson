@@ -34,17 +34,27 @@ function sampleTypes() {
 	const json = '{"x": 3, "y": 4}'
 	const coordinates: {x: number, y: number} = JSON.parse(json)
 
-	// 2. when we declare a variable and initialize it later
+	// 2. when declaring a variable and initialing it later
 	const colors = ['red', 'orange', 'green']
 	let foundGreen: boolean;
 
 	for (let i = 0; i < colors.length; i++) {
 		if (colors[i] === 'green') {
 			foundGreen = true
+			console.log(foundGreen)
 		}
 	}
 
-	console.log(foundGreen)
+	// 3. when declaring a variable that cannot be inferred properly
+	let numbers = [-21, -0, 12]
+	let numberAboveTen: number | Boolean = false
+
+	for (let i = 0; i < numbers.length; i++) {
+		if (numbers[i] > 10) {
+			numberAboveTen = numbers[i]
+			console.log(numberAboveTen)
+		}
+	}	
 
 	return cloydProfile
 
