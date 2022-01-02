@@ -25,6 +25,10 @@ function sampleTypes() {
 		favoriteFood,
 	}
 
+	const printNumber: (i:number) => void = (i: number) => {
+		console.log(i)
+	}
+
 	return cloydProfile
 
 }
