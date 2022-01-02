@@ -34,6 +34,20 @@ function sampleTypes() {
 	const json = '{"x": 3, "y": 4}'
 	const coordinates: {x: number, y: number} = JSON.parse(json)
 
+	// 2. when we declare a variable and initialize it later
+	const colors = ['red', 'orange', 'green']
+	let foundGreen: boolean;
+
+	for (let i = 0; i < colors.length; i++) {
+		if (colors[i] === 'green') {
+			foundGreen = true
+		}
+	}
+
+	console.log(foundGreen)
+
 	return cloydProfile
 
 }
+
+console.log(sampleTypes())
