@@ -29,6 +29,11 @@ function sampleTypes() {
 		console.log(i)
 	}
 
+	/* When to use annotations */
+	// 1. functions that return type any
+	const json = '{"x": 3, "y": 4}'
+	const coordinates: {x: number, y: number} = JSON.parse(json)
+
 	return cloydProfile
 
 }
