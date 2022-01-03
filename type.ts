@@ -34,6 +34,18 @@ function sampleTypes() {
 		return a + b
 	}
 
+	// annotating destructured objects
+	const weather: {day: string, temp: number} = {
+		day: 'Monday',
+		temp: 24
+	}
+	const {day, temp} : {day: string, temp: number} = weather
+	// Annotating destructred objects inside functions
+	function logWeather({day, temp}: {day: string, temp: number}) {
+		console.log(day)
+		console.log(temp)
+	}
+	
 	/* When to use annotations */
 	// 1. functions that return type any
 	const json = '{"x": 3, "y": 4}'
