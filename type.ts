@@ -25,8 +25,13 @@ function sampleTypes() {
 		favoriteFood,
 	}
 
-	const printNumber: (i:number) => void = (i: number) => {
+	// annotating the function variable
+	const printNumber: (i:number) => void = (i: number): void => {
 		console.log(i)
+	}
+	// annotating function
+	function add(a: number, b: number): number {
+		return a + b
 	}
 
 	/* When to use annotations */
