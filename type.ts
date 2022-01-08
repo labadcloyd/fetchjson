@@ -5,7 +5,8 @@ function sampleTypes() {
 		details: { age: number, height: number, nickname: string },
 		isSingle: boolean,
 		birthday: Date,
-		favoriteFood: string[]
+		favoriteFood: string[],
+		returnName(): string
 	}
 
 	const name: string = 'Cloyd Abad'
@@ -23,6 +24,9 @@ function sampleTypes() {
 		isSingle: single,
 		birthday,
 		favoriteFood,
+		returnName: () => {
+			return this.name
+		}
 	}
 
 	// annotating the function variable
