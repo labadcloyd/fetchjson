@@ -34,6 +34,13 @@ function sampleTypes() {
 		return a + b
 	}
 
+	// annotating an array
+	const arrayOfColors: string[] = ['red', 'green', 'yellow']
+
+	// annotating an array of multiple types
+	let dateAndColors: (string | Date)[];
+	dateAndColors = ['red', new Date(), 'green']
+
 	// annotating destructured objects
 	const weather: {day: string, temp: number} = {
 		day: 'Monday',
